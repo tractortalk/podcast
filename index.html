@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRACTOR TALK 🚜🎙️</title>
-<meta
-name="description"
-content="Tractor Talk — a podcast by Josh, Annika and Mila E. Watch full episodes on TikTok and YouTube."
->
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>TRACTOR TALK 🚜🎙️ — Under Maintenance</title>  
+<meta name="description" content="Tractor Talk — website is currently undergoing maintenance and redesign. Episodes still dropping on TikTok and YouTube!">  
 
 <style>    
-/* =========================================================    
-   TRACTOR TALK    
-   Website updated: 12/10/26    
-========================================================= */    
-
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800;900&display=swap');    
 
 :root {    
@@ -43,116 +35,38 @@ body {
     background: var(--black);    
     color: white;    
     font-family: "Inter", Arial, sans-serif;    
-    overflow-x: hidden;    
-}    
-
-a {    
-    color: inherit;    
-}    
-
-/* =========================================================    
-   NAVIGATION    
-========================================================= */    
-nav {    
-    position: fixed;    
-    top: 14px;    
-    left: 50%;    
-    transform: translateX(-50%);    
-    width: calc(100% - 24px);    
-    max-width: 1100px;    
-    z-index: 999;    
+    min-height: 100vh;    
     display: flex;    
+    flex-direction: column;    
     justify-content: space-between;    
     align-items: center;    
-    padding: 11px 14px;    
-    background: rgba(12, 8, 17, .86);    
-    backdrop-filter: blur(18px);    
-    border: 1px solid rgba(255,255,255,.12);    
-    border-radius: 18px;    
-}    
-
-.nav-brand {    
-    display: flex;    
-    align-items: center;    
-    gap: 9px;    
-    text-decoration: none;    
-    font-weight: 900;    
-    font-size: 14px;    
-}    
-
-.nav-brand img {    
-    width: 38px;    
-    height: 38px;    
-    border-radius: 9px;    
-    object-fit: cover;    
-}    
-
-.nav-links {    
-    display: flex;    
-    gap: 18px;    
-}    
-
-.nav-links a {    
-    text-decoration: none;    
-    font-size: 12px;    
-    font-weight: 900;    
-    opacity: .7;    
-    transition: .2s;    
-}    
-
-.nav-links a:hover {    
-    opacity: 1;    
-    color: var(--purple2);    
-}    
-
-/* =========================================================    
-   HERO    
-========================================================= */    
-.hero {    
-    min-height: 100vh;    
-    padding: 145px 20px 80px;    
-    display: flex;    
-    justify-content: center;    
-    align-items: center;    
-    text-align: center;    
-    position: relative;    
+    overflow-x: hidden;    
+    padding: 20px;    
     background:    
         radial-gradient(    
             circle at 50% 20%,    
-            rgba(140,76,255,.34),    
-            transparent 32%    
+            rgba(140,76,255,.25),    
+            transparent 40%    
         ),    
         radial-gradient(    
-            circle at 10% 90%,    
-            rgba(255,79,145,.13),    
-            transparent 25%    
+            circle at 50% 80%,    
+            rgba(255,224,82,.1),    
+            transparent 40%    
         );    
 }    
 
-.hero-content {    
+.maintenance-container {    
     width: 100%;    
-    max-width: 1000px;    
-    position: relative;    
-    z-index: 2;    
+    max-width: 750px;    
+    margin: auto;    
+    text-align: center;    
+    padding: 40px 20px;    
 }    
 
-.update {    
+.status-pill {    
     display: inline-block;    
-    margin-bottom: 17px;    
-    padding: 7px 12px;    
-    border-radius: 999px;    
-    background: #19111f;    
-    border: 1px solid rgba(255,255,255,.1);    
-    color: #aaa0b1;    
-    font-size: 11px;    
-    font-weight: 800;    
-}    
-
-.season-pill {    
-    display: block;    
-    width: fit-content;    
-    margin: 0 auto 18px;    
-    padding: 8px 15px;    
+    margin-bottom: 20px;    
+    padding: 8px 16px;    
     border-radius: 999px;    
     background: var(--yellow);    
     color: #191300;    
@@ -161,48 +75,115 @@ nav {
     transform: rotate(-2deg);    
 }    
 
-.hero-logo {    
-    display: block;    
-    width: min(440px, 87vw);    
-    margin: 0 auto 25px;    
+.logo {    
+    width: min(160px, 40vw);    
+    height: min(160px, 40vw);    
     border-radius: 25px;    
-    box-shadow: 0 0 80px rgba(140,76,255,.3);    
+    object-fit: cover;    
+    margin: 0 auto 25px;    
+    display: block;    
+    box-shadow: 0 0 50px rgba(140,76,255,.3);    
+    border: 3px solid rgba(255,255,255,.15);    
 }    
 
-.hero h1 {    
+h1 {    
     font-family: "Archivo Black", Impact, sans-serif;    
-    font-size: clamp(3.3rem, 10vw, 7.5rem);    
-    line-height: .83;    
-    letter-spacing: -5px;    
+    font-size: clamp(2.5rem, 7vw, 5rem);    
+    line-height: .9;    
+    letter-spacing: -3px;    
     text-transform: uppercase;    
+    margin-bottom: 20px;    
 }    
 
-.hero h1 .purple {    
-    color: var(--purple2);    
-}    
-
-.hero h1 .yellow {    
+h1 span {    
     color: var(--yellow);    
 }    
 
-.hero-description {    
-    max-width: 600px;    
-    margin: 27px auto;    
-    color: var(--grey);    
-    line-height: 1.65;    
-    font-size: 16px;    
+.notice-box {    
+    background: var(--card);    
+    border: 1px solid rgba(182,120,255,.3);    
+    border-radius: 24px;    
+    padding: 30px;    
+    margin: 30px 0;    
+    text-align: left;    
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);    
 }    
 
-.hero-buttons {    
+.notice-box h3 {    
+    font-family: "Archivo Black";    
+    font-size: 18px;    
+    color: var(--purple2);    
+    margin-bottom: 12px;    
+}    
+
+.notice-box p {    
+    color: var(--grey);    
+    font-size: 14px;    
+    line-height: 1.7;    
+    margin-bottom: 15px;    
+}    
+
+.notice-box p:last-child {    
+    margin-bottom: 0;    
+}    
+
+.notice-box strong {    
+    color: white;    
+}    
+
+.apology-note {    
+    background: rgba(255, 224, 82, 0.08);    
+    border: 1px dashed var(--yellow);    
+    border-radius: 14px;    
+    padding: 14px 18px;    
+    margin-top: 18px;    
+    color: #e2d9eb;    
+    font-size: 13px;    
+    line-height: 1.5;    
+}    
+
+/* =========================================================    
+   NOTIFICATION SECTION    
+========================================================= */    
+.notify-card {    
+    background: #140d1f;    
+    border: 1px solid rgba(255,255,255,.08);    
+    border-radius: 16px;    
+    padding: 16px;    
+    margin-top: 20px;    
+    display: flex;    
+    align-items: center;    
+    gap: 14px;    
+}    
+
+.notify-icon {    
+    font-size: 26px;    
+}    
+
+.notify-text {    
+    font-size: 12px;    
+    color: var(--grey);    
+    line-height: 1.5;    
+}    
+
+.notify-text strong {    
+    color: white;    
+}    
+
+/* =========================================================    
+   BUTTONS    
+========================================================= */    
+.btn-group {    
     display: flex;    
     justify-content: center;    
-    gap: 10px;    
+    gap: 12px;    
     flex-wrap: wrap;    
+    margin-top: 30px;    
 }    
 
 .btn {    
     display: inline-block;    
-    padding: 15px 21px;    
+    padding: 15px 24px;    
     border-radius: 14px;    
     text-decoration: none;    
     font-size: 13px;    
@@ -229,399 +210,9 @@ nav {
     color: #171000;    
 }    
 
-/* floating tractor */    
-.hero-tractor {    
-    position: absolute;    
-    width: 125px;    
-    right: 5%;    
-    bottom: 8%;    
-    border-radius: 20px;    
-    border: 5px solid white;    
-    box-shadow: 10px 10px 0 var(--purple);    
-    transform: rotate(7deg);    
-    animation: tractorFloat 4s ease-in-out infinite;    
-}    
-
-@keyframes tractorFloat {    
-    0%,100% {    
-        transform: translateY(0) rotate(7deg);    
-    }    
-    50% {    
-        transform: translateY(-13px) rotate(4deg);    
-    }    
-}    
-
-/* =========================================================    
-   QUICK STATS    
-========================================================= */    
-.stats {    
-    max-width: 900px;    
-    margin: -20px auto 70px;    
-    padding: 0 18px;    
-    display: grid;    
-    grid-template-columns: repeat(3,1fr);    
-    gap: 12px;    
-}    
-
-.stat {    
-    padding: 22px 12px;    
-    text-align: center;    
-    background: var(--card);    
-    border: 1px solid rgba(255,255,255,.08);    
-    border-radius: 20px;    
-}    
-
-.stat-number {    
-    font-family: "Archivo Black";    
-    font-size: 28px;    
-    color: var(--purple2);    
-}    
-
-.stat-text {    
-    margin-top: 4px;    
-    color: #908798;    
-    font-size: 11px;    
-    font-weight: 900;    
-    text-transform: uppercase;    
-}    
-
-/* =========================================================    
-   GENERAL SECTIONS    
-========================================================= */    
-.section {    
-    max-width: 1080px;    
-    margin: auto;    
-    padding: 90px 20px;    
-}    
-
-.section-tag {    
-    color: var(--yellow);    
-    font-size: 11px;    
-    font-weight: 900;    
-    letter-spacing: 2px;    
-    margin-bottom: 10px;    
-}    
-
-.section-title {    
-    font-family: "Archivo Black";    
-    font-size: clamp(2.8rem, 7vw, 5.5rem);    
-    line-height: .88;    
-    letter-spacing: -3px;    
-}    
-
-/* =========================================================    
-   WATCH FIRST    
-========================================================= */    
-.watch {    
-    background: var(--dark);    
-    border-top: 1px solid rgba(255,255,255,.06);    
-    border-bottom: 1px solid rgba(255,255,255,.06);    
-}    
-
-.watch-grid {    
-    display: grid;    
-    grid-template-columns: 1fr 1fr;    
-    gap: 40px;    
-    align-items: center;    
-}    
-
-.listen-image {    
-    width: 100%;    
-    display: block;    
-    border-radius: 25px;    
-    border: 3px solid #2a193c;    
-    transform: rotate(-2deg);    
-    box-shadow: 15px 15px 0 #32175a;    
-}    
-
-.watch-copy p {    
-    margin: 20px 0;    
-    color: var(--grey);    
-    line-height: 1.7;    
-}    
-
-.priority {    
-    margin: 20px 0;    
-    padding: 17px;    
-    border-radius: 17px;    
-    background: #21132f;    
-    border: 1px solid rgba(182,120,255,.3);    
-}    
-
-.priority strong {    
-    display: block;    
-    color: var(--purple2);    
-    margin-bottom: 5px;    
-}    
-
-.priority span {    
-    color: #aaa1b0;    
-    font-size: 12px;    
-    line-height: 1.5;    
-}    
-
-.platform {    
-    display: flex;    
-    align-items: center;    
-    gap: 14px;    
-    padding: 16px;    
-    margin-top: 10px;    
-    text-decoration: none;    
-    border-radius: 16px;    
-    background: #17101f;    
-    border: 1px solid rgba(255,255,255,.08);    
-    transition: .2s;    
-}    
-
-.platform:hover {    
-    transform: translateX(7px);    
-    border-color: var(--purple);    
-}    
-
-.platform-icon {    
-    font-size: 28px;    
-}    
-
-.platform strong {    
-    display: block;    
-    font-size: 14px;    
-}    
-
-.platform small {    
-    color: #908798;    
-    font-size: 11px;    
-}    
-
-/* =========================================================    
-   SUPPORT NOTICE (NEW)    
-========================================================= */    
-.support-banner {    
-    max-width: 1080px;    
-    margin: 0 auto;    
-    padding: 0 20px 40px;    
-}
-
-.support-box {    
-    padding: 25px;    
-    border-radius: 20px;    
-    background: linear-gradient(135deg, #20102e, #130a1c);    
-    border: 1px solid rgba(182,120,255,.3);    
-    text-align: center;    
-}
-
-.support-box h3 {    
-    font-family: "Archivo Black";    
-    font-size: 22px;    
-    color: var(--yellow);    
-    margin-bottom: 10px;    
-}
-
-.support-box p {    
-    color: var(--grey);    
-    font-size: 13px;    
-    line-height: 1.6;    
-    max-width: 750px;    
-    margin: 0 auto;    
-}
-
-.support-box strong {    
-    color: white;    
-}
-
-/* =========================================================    
-   CREW    
-========================================================= */    
-.crew-grid {    
-    display: grid;    
-    grid-template-columns: repeat(3,1fr);    
-    gap: 14px;    
-    margin-top: 40px;    
-}    
-
-.person {    
-    position: relative;    
-    min-height: 210px;    
-    padding: 25px;    
-    display: flex;    
-    flex-direction: column;    
-    justify-content: flex-end;    
-    overflow: hidden;    
-    border-radius: 24px;    
-    background:    
-        linear-gradient(    
-            145deg,    
-            #241238,    
-            #110a18    
-        );    
-    border: 1px solid rgba(255,255,255,.08);    
-    transition: .25s;    
-}    
-
-.person:hover {    
-    transform: translateY(-7px) rotate(-1deg);    
-    border-color: var(--purple);    
-}    
-
-.person-letter {    
-    position: absolute;    
-    right: 5px;    
-    top: -25px;    
-    font-family: "Archivo Black";    
-    font-size: 140px;    
-    color: rgba(140,76,255,.13);    
-}    
-
-.person h3 {    
-    position: relative;    
-    font-family: "Archivo Black";    
-    font-size: 29px;    
-}    
-
-.person p {    
-    position: relative;    
-    margin-top: 5px;    
-    color: #a79eae;    
-    font-size: 12px;    
-}    
-
-/* =========================================================    
-   MILAN UPDATE    
-========================================================= */    
-.milan-note {    
-    max-width: 800px;    
-    margin: 30px auto 0;    
-    padding: 20px;    
-    border-radius: 20px;    
-    background: #151018;    
-    border: 1px solid var(--yellow);    
-    text-align: center;    
-}    
-
-.milan-note strong {    
-    display: block;    
-    margin-bottom: 6px;    
-    color: var(--yellow);    
-}    
-
-.milan-note p {    
-    color: #8f8795;    
-    font-size: 12px;    
-    line-height: 1.6;    
-}    
-
-/* =========================================================    
-   SEASON 2 / UPCOMING (UPDATED)    
-========================================================= */    
-.season {    
-    padding: 110px 20px;    
-    text-align: center;    
-    background:    
-        radial-gradient(    
-            circle at center,    
-            #32155a,    
-            #0a060d 65%    
-        );    
-}    
-
-.season-pill-large {    
-    display: inline-block;    
-    margin-bottom: 20px;    
-    padding: 9px 15px;    
-    border-radius: 999px;    
-    background: var(--yellow);    
-    color: #191300;    
-    font-size: 11px;    
-    font-weight: 900;    
-}    
-
-.season h2 {    
-    font-family: "Archivo Black";    
-    font-size: clamp(3.5rem, 10vw, 7rem);    
-    line-height: .82;    
-    letter-spacing: -5px;    
-}    
-
-.season h2 span {    
-    color: var(--yellow);    
-}    
-
-.season p {    
-    max-width: 600px;    
-    margin: 25px auto;    
-    color: var(--grey);    
-    line-height: 1.7;    
-}    
-
-.season-note {    
-    display: inline-block;    
-    padding: 13px 17px;    
-    border-radius: 13px;    
-    background: #17101f;    
-    border: 1px dashed var(--purple);    
-    font-size: 12px;    
-    font-weight: 900;    
-}    
-
-/* =========================================================    
-   FORM / COLLAB    
-========================================================= */    
-.collab {    
-    background: var(--purple);    
-    text-align: center;    
-}    
-
-.collab h2 {    
-    font-family: "Archivo Black";    
-    font-size: clamp(3rem, 8vw, 6rem);    
-    line-height: .85;    
-    letter-spacing: -4px;    
-}    
-
-.collab p {    
-    max-width: 550px;    
-    margin: 22px auto;    
-    font-weight: 600;    
-    line-height: 1.6;    
-}    
-
-.collab .btn {    
-    background: #100817;    
-    color: white;    
-}    
-
-/* =========================================================    
-   FINAL    
-========================================================= */    
-.final {    
-    padding: 100px 20px;    
-    text-align: center;    
-    background: #0b0710;    
-}    
-
-.final h2 {    
-    font-family: "Archivo Black";    
-    font-size: clamp(3rem, 8vw, 6rem);    
-    line-height: .85;    
-    letter-spacing: -4px;    
-}    
-
-.final h2 span {    
-    color: var(--purple2);    
-}    
-
-.final p {    
-    margin: 20px auto;    
-    color: var(--grey);    
-    max-width: 500px;    
-}    
-
-/* =========================================================    
-   FOOTER    
-========================================================= */    
 footer {    
-    padding: 40px 20px;    
+    padding: 20px;    
     text-align: center;    
-    background: #060407;    
     color: #706975;    
     font-size: 11px;    
 }    
@@ -630,415 +221,88 @@ footer strong {
     color: white;    
 }    
 
-.footer-links {    
-    display: flex;    
-    justify-content: center;    
-    gap: 20px;    
-    margin: 15px 0;    
-}    
-
-.footer-links a {    
-    color: #aaa1ad;    
-    text-decoration: none;    
-    font-weight: 900;    
-}    
-
-.footer-links a:hover {    
-    color: var(--purple2);    
-}    
-
-.updated {    
-    margin-top: 14px;    
-    color: #57515b;    
-}    
-
 .credit {    
     margin-top: 6px;    
     color: var(--purple2);    
     font-weight: 600;    
 }    
 
-/* =========================================================    
-   MOBILE    
-========================================================= */    
-@media (max-width: 760px) {    
-    .nav-links {    
-        display: none;    
-    }    
-
-    nav {    
-        width: calc(100% - 18px);    
-    }    
-
-    .hero {    
-        padding-top: 125px;    
-    }    
-
-    .hero h1 {    
-        letter-spacing: -3px;    
-    }    
-
-    .hero-tractor {    
-        width: 80px;    
-        right: 2%;    
-        bottom: 3%;    
-    }    
-
-    .stats {    
-        grid-template-columns: 1fr;    
-        margin-top: 20px;    
-    }    
-
-    .watch-grid {    
-        grid-template-columns: 1fr;    
-    }    
-
-    .crew-grid {    
-        grid-template-columns: 1fr;    
-    }    
-
-    .section {    
-        padding: 70px 20px;    
-    }    
-
-    .listen-image {    
-        transform: none;    
-    }    
-
-    .hero-buttons {    
+@media (max-width: 600px) {    
+    .btn-group {    
         flex-direction: column;    
     }    
-
-    .hero-buttons .btn {    
+    .btn {    
         width: 100%;    
     }    
+    .notice-box {    
+        padding: 20px;    
+    }    
+    .notify-card {    
+        flex-direction: column;    
+        text-align: center;    
+    }    
 }    
-</style>
-</head>
-<body>
+</style>  
+</head>  
+<body>  
 
-<!-- ======================================================    
-     NAVIGATION    
-====================================================== -->
-<nav>
-<a class="nav-brand" href="#top">
-<img    
-    src="https://i.postimg.cc/C1wn7tjq/logo.jpg"    
-    alt="Tractor Talk logo"    
->    
-TRACTOR TALK
-</a>
-<div class="nav-links">
-    <a href="#watch">WATCH</a>
-    <a href="#crew">CREW</a>
-    <a href="#season">SEASON 2</a>
-    <a href="#contact">CONTACT</a>
-</div>
-</nav>
+<div class="maintenance-container">  
+    <div class="status-pill">  
+        🛠️ WEBSITE UNDER MAINTENANCE  
+    </div>  
 
-<!-- ======================================================    
-     HERO    
-====================================================== -->
-<header class="hero" id="top">
-<div class="hero-content">
-<div class="update">    
-    Last updated: 12/10/26    
-</div>
+    <img class="logo" src="https://i.postimg.cc/C1wn7tjq/logo.jpg" alt="Tractor Talk logo">  
 
-<div class="season-pill">    
-    🚀 SEASON 2 COMING SOON • 2026    
-</div>
+    <h1>  
+        SITE IS <br><span>DOWN</span> FOR CHANGES.  
+    </h1>  
 
-<img    
-    class="hero-logo"    
-    src="https://i.postimg.cc/C1wn7tjq/logo.jpg"    
-    alt="Tractor Talk Podcast"    
->
+    <div class="notice-box">  
+        <h3>⚠️ WHAT'S HAPPENING?</h3>  
+        <p>  
+            We are currently redoing our website! We found a layout bug in our latest version and the team is working hard behind the scenes to fix it up and rebuild the layout properly.  
+        </p>  
+        <p>  
+            Expect the brand new website to reopen in <strong>late November</strong>.  
+        </p>  
 
-<h1>    
-    TALK.<br>    
-    <span class="purple">    
-        LAUGH.    
-    </span><br>    
-    <span class="yellow">    
-        REPEAT.    
-    </span>    
-</h1>
+        <div class="apology-note">  
+            <strong>🙏 We are so sorry for the inconvenience!</strong><br>  
+            Yeah, really sorry about this—thanks for being patient with us while we get everything sorted out!  
+        </div>  
 
-<p class="hero-description">    
-    Three friends. One podcast.    
-    A LOT of conversations.    
-    Welcome to Tractor Talk —    
-    where Season 2 is going to be epic! 😂    
-</p>
+        <!-- Notification Tip -->  
+        <div class="notify-card">  
+            <div class="notify-icon">🔔</div>  
+            <div class="notify-text">  
+                <strong>Stay in the loop!</strong> Make sure to turn on notifications on our TikTok and YouTube channels so you know the exact day the new website drops!  
+            </div>  
+        </div>  
 
-<div class="hero-buttons">    
-    <a    
-        class="btn btn-tiktok"    
-        href="https://www.tiktok.com/@tractortalkpodcast"    
-        target="_blank"    
-    >    
-        🎵 WATCH ON TIKTOK    
-    </a>    
+        <p style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.08);">  
+            <strong>🎙️ STILL WANT CONTENT & HAVE IDEAS?</strong><br>  
+            Don't worry—episodes are still actively being released, casted, and uploaded to TikTok and YouTube! Plus, our suggestion form is still live below if you have any topic ideas or questions for us.  
+        </p>  
+    </div>  
 
-    <a    
-        class="btn btn-youtube"    
-        href="https://www.youtube.com/channel/UCqYGZdBc4nDVTsgfTPxwpRQ"    
-        target="_blank"    
-    >    
-        ▶ YOUTUBE    
-    </a>    
-</div>
+    <div class="btn-group">  
+        <a class="btn btn-tiktok" href="https://www.tiktok.com/@tractortalkpodcast" target="_blank">  
+            🎵 WATCH ON TIKTOK  
+        </a>  
+        <a class="btn btn-youtube" href="https://www.youtube.com/channel/UCqYGZdBc4nDVTsgfTPxwpRQ" target="_blank">  
+            ▶ WATCH ON YOUTUBE  
+        </a>  
+        <a class="btn btn-form" href="https://forms.cloud.microsoft/r/A1Kg9JAi3v" target="_blank">  
+            📝 SUBMIT TOPIC IDEAS  
+        </a>  
+    </div>  
+</div>  
 
-</div>
-<img
-class="hero-tractor"
-src="https://i.postimg.cc/mrBrW9tx/tractor.jpg"
-alt="Tractor"
->
-</header>
+<footer>  
+    <strong>🚜 TRACTOR TALK 🎙️</strong>  
+    <p>Josh • Annika • Mila E • Milan</p>  
+    <p class="credit">Website designed and coded by Josh 💻✨</p>  
+</footer>  
 
-<!-- ======================================================    
-     STATS    
-====================================================== -->
-<div class="stats">
-<div class="stat">
-    <div class="stat-number">44+</div>
-    <div class="stat-text">Podcast Followers</div>
-</div>
-<div class="stat">
-    <div class="stat-number">3</div>
-    <div class="stat-text">Current Hosts</div>
-</div>
-<div class="stat">
-    <div class="stat-number">∞</div>
-    <div class="stat-text">Random Conversations</div>
-</div>
-</div>
-
-<!-- ======================================================    
-     WATCH    
-====================================================== -->
-<section class="watch" id="watch">
-<div class="section watch-grid">
-<div>
-    <img    
-        class="listen-image"    
-        src="https://i.postimg.cc/rsKmYLzq/listen.jpg"    
-        alt="Watch Tractor Talk"    
-    >
-</div>
-
-<div class="watch-copy">
-    <div class="section-tag">    
-        👀 IMPORTANT    
-    </div>
-
-    <h2 class="section-title">    
-        WATCH<br>    
-        US FIRST.    
-    </h2>
-
-    <p>    
-        Want to keep up with the newest episodes?    
-        <strong>    
-            TikTok is currently the place to watch them first.    
-        </strong>    
-    </p>
-
-    <div class="priority">    
-        <strong>    
-            🎵 FULL EPISODES ARE ON TIKTOK    
-        </strong>    
-        <span>    
-            We post our full podcast episodes on    
-            TikTok. Check there for the newest episodes.    
-        </span>    
-    </div>
-
-    <a    
-        class="platform"    
-        href="https://www.tiktok.com/@tractortalkpodcast"    
-        target="_blank"    
-    >    
-        <div class="platform-icon">🎵</div>    
-        <div>    
-            <strong>TikTok — @tractortalkpodcast</strong>    
-            <small>Full episodes + clips + chaos</small>    
-        </div>    
-    </a>
-
-    <a    
-        class="platform"    
-        href="https://www.youtube.com/channel/UCqYGZdBc4nDVTsgfTPxwpRQ"    
-        target="_blank"    
-    >    
-        <div class="platform-icon">▶️</div>    
-        <div>    
-            <strong>YouTube</strong>    
-            <small>Episodes are uploaded here too, but may be a little delayed.</small>    
-        </div>    
-    </a>
-</div>
-</div>
-</section>
-
-<!-- ======================================================    
-     SUPPORT BANNER (NEW)    
-====================================================== -->
-<div class="support-banner">
-<div class="support-box">
-    <h3>💡 HOW YOU SUPPORT THE SHOW</h3>
-    <p>Did you know? By <strong>copying the link of the episodes you watch on TikTok</strong>, it helps support us and generates revenue! That means we can upgrade our equipment, boost our quality, and bring you even better episodes every single week.</p>
-</div>
-</div>
-
-<!-- ======================================================    
-     CREW    
-====================================================== -->
-<section class="section" id="crew">
-<div class="section-tag">    
-    👥 THE CURRENT CREW    
-</div>
-<h2 class="section-title">    
-    THREE<br>    
-    PEOPLE.    
-</h2>
-<div class="crew-grid">
-<div class="person">
-    <div class="person-letter">J</div>
-    <h3>Josh</h3>
-    <p>🎙️ Host • Editor</p>
-</div>
-
-<div class="person">
-    <div class="person-letter">A</div>
-    <h3>Annika</h3>
-    <p>🎙️ Host</p>
-</div>
-
-<div class="person">
-    <div class="person-letter">M</div>
-    <h3>Mila E</h3>
-    <p>🎙️ Host</p>
-</div>
-</div>
-
-<!-- Milan -->
-<div class="milan-note">
-    <strong>👋 MILAN IS COMING BACK SOON!</strong>
-    <p>Milan will be returning to the Tractor Talk podcast very soon. We are super excited to have him back in the crew for upcoming episodes!</p>
-</div>
-</section>
-
-<!-- ======================================================    
-     SEASON 2 (UPDATED)    
-====================================================== -->
-<section class="season" id="season">
-<div class="season-pill-large">    
-    🔥 SEASON 2 IS COMING SOON    
-</div>
-<h2>    
-    GET<br>    
-    <span>    
-        READY.    
-    </span>    
-</h2>
-<p>    
-    Season 2 is officially on the way and it's going to be absolutely epic! 
-    Get ready for crazier conversations, bigger laughs, and brand new episodes.
-</p>
-<div class="season-note">    
-    🎙️ STAY TUNED — SEASON 2 DROPS SOON!    
-</div>
-</section>
-
-<!-- ======================================================    
-     COLLAB / QUESTIONS    
-====================================================== -->
-<section class="collab" id="contact">
-<div class="section">
-<div class="section-tag" style="color:#171000;">    
-    💬 GOT SOMETHING TO SAY?    
-</div>
-
-<h2>    
-    TALK<br>    
-    TO US.    
-</h2>
-
-<p>    
-    Want to collaborate with Tractor Talk?    
-    Have a question?    
-    Got a topic idea?    
-    Fill out our form and send it our way! 🚜    
-</p>
-
-<a    
-    class="btn"    
-    href="https://forms.cloud.microsoft/r/A1Kg9JAi3v"    
-    target="_blank"    
->    
-    📝 FILL OUT THE FORM →    
-</a>
-</div>
-</section>
-
-<!-- ======================================================    
-     FINAL    
-====================================================== -->
-<section class="final">
-<h2>    
-    SEE YOU<br>    
-    <span>    
-        IN SEASON 2.    
-    </span>    
-</h2>
-<p>    
-    Until then... Watch the full episodes on TikTok,    
-    copy those links to support us, and keep an eye out for what's next!    
-</p>
-<div class="hero-buttons">
-    <a    
-        class="btn btn-tiktok"    
-        href="https://www.tiktok.com/@tractortalkpodcast"    
-        target="_blank"    
-    >    
-        🎵 TIKTOK    
-    </a>    
-
-    <a    
-        class="btn btn-youtube"    
-        href="https://www.youtube.com/channel/UCqYGZdBc4nDVTsgfTPxwpRQ"    
-        target="_blank"    
-    >    
-        ▶ YOUTUBE    
-    </a>    
-
-    <a    
-        class="btn btn-form"    
-        href="https://forms.cloud.microsoft/r/A1Kg9JAi3v"    
-        target="_blank"    
-    >    
-        💬 CONTACT US    
-    </a>
-</div>
-</section>
-
-<!-- ======================================================    
-     FOOTER    
-====================================================== -->
-<footer>
-<strong>🚜 TRACTOR TALK 🎙️</strong>
-<div class="footer-links">
-    <a href="https://www.tiktok.com/@tractortalkpodcast" target="_blank">TikTok</a>
-    <a href="https://www.youtube.com/channel/UCqYGZdBc4nDVTsgfTPxwpRQ" target="_blank">YouTube</a>
-    <a href="https://forms.cloud.microsoft/r/A1Kg9JAi3v" target="_blank">Contact</a>
-</div>
-<p>Josh • Annika • Mila E</p>
-<p class="updated">Last updated: Every month with fresh updates</p>
-<p class="credit">Website designed and coded by Josh 💻✨</p>
-</footer>
-
-</body>
+</body>  
 </html>
